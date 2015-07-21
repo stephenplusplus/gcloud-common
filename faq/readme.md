@@ -48,7 +48,7 @@ If you're experiencing a bug with the code, or have an idea for how it can be im
 
 [gcloud-cli]: https://cloud.google.com/sdk/gcloud/
 
-[so-java]: http://stackoverflow.com/questions/tagged/gcloud-go
+[so-golang]: http://stackoverflow.com/questions/tagged/gcloud-go
 [so-java]: http://stackoverflow.com/questions/tagged/gcloud-java
 [so-node]: http://stackoverflow.com/questions/tagged/gcloud-node
 [so-python]: http://stackoverflow.com/questions/tagged/gcloud-python
