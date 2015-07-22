@@ -1,0 +1,110 @@
+# How to contribute to gcloud
+
+Thank you for your interest in contributing to [gcloud](https://github.com/GoogleCloudPlatform). The APIs of the [Google Cloud Platform](https://cloud.google.com/) constitute a huge offering that continues to expand at a rapid pace. Because there is so much work to do to make the gcloud library the best-ever way to access these APIs, we desperately need your help. Your contributions are more than just welcome, they are essential.
+
+Therefore, out of respect for your time and effort, we are trying hard to make contributing to gcloud a safe, efficient, and well-defined process. If you encounter any difficulty during the process, do not hesitate to [get in touch](#getting-help). We need you to succeed, and will do all that we can to get you there.
+
+## Signing the Contributor License Agreement (CLA)
+
+Open-source software licensing is a wonderful arrangement that benefits everyone, but in an imperfect world, we all need to exercise some legal prudence. In order to protect you, Google, and most of all, everyone who comes to depend on this library, we require that all contributors sign our short and human-readable Contributor License Agreement (CLA). We don't want to open the door to patent trolls, predatory lawyers, or anyone else who isn't on board with creating value and making the world a better place. We hope you will agree that the CLA offers very important protection and is easy to understand. Take a moment to read it carefully, and if you agree with what you read, please sign it now. If you believe you've already signed the appropriate CLA already for this or any other Google open-source project, you shouldn't have to do so again. You can review your signed CLAs at [cla.developers.google.com/clas](https://cla.developers.google.com/clas).
+
+First, check that you are signed in to a [Google Account](https://accounts.google.com) that matches your [local Git email address](https://help.github.com/articles/setting-your-email-in-git/). Then choose one of the following:
+
+* If you are **an individual writing original source code** and **you own the intellectual property**, sign the [Individual CLA](https://developers.google.com/open-source/cla/individual).
+* If you work for **a company that wants to allow you to contribute**, sign the [Corporate CLA](https://developers.google.com/open-source/cla/corporate).
+
+You (and your authorized signer, if corporate) can sign the CLA electronically. After that, we'll be able to accept your contributions.
+
+## Getting help
+
+As mentioned above, with so much work that needs to be done, we would hate for you to waste your effort. Therefore, assuming that you have a specific change that you would like to contribute, the first step is to verify that: 1) your change is needed, and 2) someone else isn't already working on it. If you don't have a change in mind, and instead are just looking for a way to help (we love this!), please skip ahead to [Finding something to work on](#finding-something-to-work-on).
+
+If your idea for a change to gcloud stems from difficulty or frustration with the library, the first thing to do is to reach out for help. The best place to start is the [gcloud tag on Stack Overflow](http://stackoverflow.com/questions/tagged/gcloud). If find yourself looking through too many questions, try narrowing the results by adding a library-specific tags, such as [gcloud-node](http://stackoverflow.com/questions/tagged/gcloud-node), [gcloud-python](http://stackoverflow.com/questions/tagged/gcloud-python), or [gcloud-ruby](http://stackoverflow.com/questions/tagged/gcloud-ruby). Many issues are similar across platforms. If your searches fail to turn anything up, click the `Ask Question` button in the upper right corner of Stack Overflow and complete the form. Don't forget to add the `gcloud` tag as well as the library-specific tag before submitting. We will try our best to answer within one business day.
+
+When you've determined that something in gcloud clearly needs changing, the next step is to visit the project's GitHub issues page. Enter your keyword(s) into the search bar, and if your first search fails to turn up something helpful, try removing the `is:issue is:open` filters from the search bar. The topic you're looking for may have been discussed in an issue that is already closed.
+
+### Opening an issue
+
+If you really can't find your topic, either in Stack Overflow or in GitHub issues, it is probably time to open a GitHub issue. GitHub provides a guide, [Mastering Issues](https://guides.github.com/features/issues/), that is useful if you are unfamiliar with the process. Here are the specific steps for opening a gcloud issue:
+
+1. Go to the project issues page on GitHub.
+1. Click the green `New Issue` button located in the upper right corner.
+1. Click the `Labels` link to the right of the Issue form, and select any relevant labels. For example, if you have encountered an error while attempting to use the [Datastore](https://cloud.google.com/datastore/) service, select the labels `bug` and `datastore`.
+1. In the title field, write a single phrase that identifies your issue, including service, class, and method names if appropriate.
+1. In the main editor, describe your issue. The details of your description will vary depending on your issue type, as follows:
+    * `bug` - Document the steps to reproduce. List relevant details about your environment, especially your Ruby version. Include the full stack trace (backtrace) if there is an exception.
+    * `enhancement` - Put on your salesman hat and sell your proposed feature. If you can, link to some compelling external examples.
+    * `docs` - Helping us improve the project documentation should not be a hassle. Just quickly let us know where the problem is, and jot down a suggestion or two for making things better.
+1. Click the submit button.
+
+Thank you. We will do our best to comment on your issue within one business day.
+
+## Finding something to work on
+
+The GitHub project issues page is the place to look for shovel-ready work. Here are some suggestions for your first contribution, listed in ascending order of effort and difficulty.
+
+* Confirm a `bug` issue by reproducing it in your own environment and adding a comment detailing what you found.
+* Review a pull request by checking out the creator's branch, and examining the change in your own environment.
+* Offer to work on a `docs` issue.
+* Offer to work on a `bug` issue.
+
+If you can't find anything actionable, be sure to check back again in a week or so.
+
+## Making changes to gcloud
+
+The following is a high-level overview of how to contribute to the gcloud library:
+
+1. Follow the steps in [Getting help](#getting-help) to ensure that your work is coordinated with the efforts of others, including [opening an issue](#opening-an-issue) if appropriate.
+
+1. Sign the [Contributor License Agreement (CLA)](#signing-the-contributor-license-agreement-cla).
+
+1. Clone the project repository from GitHub.
+
+  ```
+  git clone git@github.com:GoogleCloudPlatform/<project name>.git
+  ```
+
+1. Set up your local development environment. See the project [development guide](/docs/content/development/readme.md) for specifics.
+
+1. Run the project tests as described in the [development guide](/docs/content/development/readme.md).
+You need to be certain that all tests are passing in your local environment before you make any changes.
+
+1. Create a new local branch.
+
+  ```
+  git checkout -b <new issue name>
+  ```
+
+1. Make changes. Be sure to edit or add API documentation for your changes.
+
+1. Edit or add tests. All contributions must include tests that ensure the contributed code behaves as expected. (You do this first? Congrats, you'll score the TDD badge.)
+
+1. Check your coding style. Please follow the established coding style in the library. See the project [style guide](/docs/content/style/readme.md) for specifics.
+
+1. Run the tests.
+
+1. Commit your code. Take a moment to write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html). If you end up with several commits for one logical change,  [squash](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Squashing-Commits) these commits for clarity.
+
+1. On GitHub, [create a fork](https://guides.github.com/activities/forking/) of the project.
+
+1. Add your fork as a remote to your local repository:
+
+  ```
+  git remote add <your username> git@github.com:<your username>/<project name>.git
+  ```
+
+1. Push your branch to your fork.
+
+  ```
+  git push <your username> <new issue name>
+  ```
+
+1. On the GitHub page for your fork and branch, create a [pull request](https://help.github.com/articles/using-pull-requests/) by clicking `Compare & pull request`. Edit the message copied from your commit, adding more detail if needed, and formatting it using [Markdown](https://guides.github.com/features/mastering-markdown/). Add any appropriate labels, then click `Create pull request`.
+
+Your pull request is where we (and anyone else who is interested) will discuss your change.
+
+## Verifying your contribution
+
+Be sure to check your pull request for a `cla:yes` label. If you see a `cla:no` label, verify that you have [signed the CLA](#signing-the-contributor-license-agreement-cla) using a Google Account that matches your Git email. Once your pull request has the `cla:yes` label, look out for email notification that either your pull request has been merged, or someone has requested a little more work on it. If more work is needed, repeat **steps 5**, **7-11**, and **14**, above. Unfortunately, there is also the possibility that due to a failure at **step 1**, or simply as a result of changing circumstances, your pull request will be closed. In this case, we sincerely hope you'll dust yourself off and jump back in the saddle to try again on a new issue.
+
+Happy contributing! And, once again, thank you.
