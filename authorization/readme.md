@@ -31,7 +31,7 @@ If you are not running this client on Google Compute Engine, you need a Google D
 
   1. Navigate to **APIs & auth** > **APIs** and enable the APIs that your application requires.
 
-    <center><img src="enable-apis.png"></center>
+    ![Enable the APIs that your application requires](enable-apis.png)
 
     *Note: You may need to enable billing in order to use these services.*
 
@@ -55,17 +55,17 @@ If you are not running this client on Google Compute Engine, you need a Google D
 
     Click on **Generate new JSON key**:
 
-    <center><img src="generate-new-json-key.png"></center>
+    ![Generate a new JSON key](generate-new-json-key.png)
 
     ###### Create a new service account
 
     Click on **Create new Client ID**:
 
-    <center><img src="create-new-client-id.png"></center>
+    ![Create a new Client ID](create-new-client-id.png)
 
     Select **Service account**:
 
-    <center><img src="service-account.png"></center>
+    ![Select Service account](service-account.png)
 
     After the account is created, you will be prompted to download the JSON key file that the library uses to authorize your requests.
 
