@@ -17,4 +17,8 @@ How to enable the correct APIs for your project, create a service account, gener
 Common questions about using the gcloud client libraries, including:
 
   - [What's the difference between Project Name and Project ID?](faq/readme.md#project-terms)
-  - [Where can I get more help?](faq/readme.md#get-help)
+  - [What's the relationship between gcloud-* and the gcloud command-line tool?](faq/readme.md#gcloud-sdk)
+
+#### [Troubleshooting](troubleshooting/readme.md)
+
+Still need help? Here is a list of helpful links.
