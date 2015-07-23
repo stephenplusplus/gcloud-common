@@ -63,10 +63,9 @@ The following is a high-level overview of how to contribute to a gcloud client l
   git clone git@github.com:GoogleCloudPlatform/<project name>.git
   ```
 
-1. Set up your local development environment. See [CONTRIBUTING.md](/CONTRIBUTING.md) for specifics.
+1. Set up your local development environment.
 
-1. Run the project tests as described in [CONTRIBUTING.md](/CONTRIBUTING.md).
-You need to be certain that all tests are passing in your local environment before you make any changes.
+1. Run the project tests. You need to be certain that all tests are passing in your local environment before you make any changes.
 
 1. Create a new local branch.
 
@@ -78,7 +77,7 @@ You need to be certain that all tests are passing in your local environment befo
 
 1. Edit or add tests. All contributions must include tests that ensure the contributed code behaves as expected. (You did this in the previous step? Congrats, you just scored the TDD badge.)
 
-1. Check your coding style. Please follow the established coding style in the library. See [CONTRIBUTING.md](/CONTRIBUTING.md) for specifics.
+1. Check your coding style. Please follow the style guide for the library.
 
 1. Run the tests again.
 
