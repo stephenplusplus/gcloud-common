@@ -22,3 +22,7 @@ Common questions about using the gcloud client libraries, including:
 #### [Troubleshooting](troubleshooting/readme.md)
 
 Still need help? Here is a list of helpful links.
+
+#### [Contributing](contributing/readme.md)
+
+Found a bug? Want to work on a feature? Become a contributor to your Google Cloud Platform client library.
