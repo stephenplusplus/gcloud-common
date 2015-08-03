@@ -52,7 +52,7 @@ The following is a high-level overview of how to contribute to a gcloud client l
 1. Clone the project repository from GitHub.
 
   ```sh
-  $ git clone git@github.com:GoogleCloudPlatform/<project name>.git
+  $ git clone git@github.com:GoogleCloudPlatform/<project-name>.git
   ```
 
 1. Set up your local development environment.
@@ -62,7 +62,7 @@ The following is a high-level overview of how to contribute to a gcloud client l
 1. Create a new local branch.
 
   ```sh
-  $ git checkout -b <new issue name>
+  $ git checkout -b <new-issue-name>
   ```
 
 1. Make changes. Be sure to edit or add API documentation for your changes.
@@ -80,13 +80,13 @@ The following is a high-level overview of how to contribute to a gcloud client l
 1. Add your fork as a remote to your local repository:
 
   ```sh
-  $ git remote add <your username> git@github.com:<your username>/<project name>.git
+  $ git remote add <your-username> git@github.com:<your-username>/<project-name>.git
   ```
 
 1. Push your branch to your fork.
 
   ```sh
-  $ git push <your username> <new issue name>
+  $ git push <your-username> <new-issue-name>
   ```
 
 1. On the GitHub page for your fork and branch, create a [pull request](https://help.github.com/articles/using-pull-requests/) by clicking `Compare & pull request`. Edit the message copied from your commit, adding more detail if needed, then click `Create pull request`.
