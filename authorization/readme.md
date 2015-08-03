@@ -31,7 +31,7 @@ If you are not running this client on Google Compute Engine, you need a Google D
 
   1. Navigate to **APIs & auth** > **APIs** and enable the APIs that your application requires.
 
-    ![Enable the APIs that your application requires](enable-apis.png)
+    ![Enable the APIs that your application requires][enable-apis]
 
     *Note: You may need to enable billing in order to use these services.*
 
@@ -55,20 +55,24 @@ If you are not running this client on Google Compute Engine, you need a Google D
 
     Click on **Generate new JSON key**:
 
-    ![Generate a new JSON key](generate-new-json-key.png)
+    ![Generate a new JSON key][generate-key]
 
     ###### Create a new service account
 
     Click on **Create new Client ID**:
 
-    ![Create a new Client ID](create-new-client-id.png)
+    ![Create a new Client ID][create-id]
 
     Select **Service account**:
 
-    ![Select Service account](service-account.png)
+    ![Select Service account][service-account]
 
     After the account is created, you will be prompted to download the JSON key file that the library uses to authorize your requests.
 
 
+[enable-apis]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/enable-apis.png
+[generate-key]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/generate-new-json-key.png
+[create-id]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/create-new-client-id.png
+[service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/service-account.png
 [dev-console]: https://console.developers.google.com/project
 [gce-how-to]: https://cloud.google.com/compute/docs/authentication#using
