@@ -51,13 +51,13 @@ If you are not running this client on Google Compute Engine, you need a Google D
 
     If you already have a service account, you can easily generate a new key file. If you don't have a service account, skip down to *[Create a new service account](#create-a-new-service-account)*.
 
-    ###### Re-use an existing service account
+    ### Re-use an existing service account
 
     Click on **Generate new JSON key**:
 
     ![Generate a new JSON key][generate-key]
 
-    ###### Create a new service account
+    ### Create a new service account
 
     Click on **Create new Client ID**:
 
