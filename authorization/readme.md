@@ -6,16 +6,21 @@ It's easy to get authorized and start using Google's APIs. You can set your cred
 
 If you are running this client on Google Compute Engine, we handle authorization for you with no configuration. Just be sure when you [set up the GCE instance][gce-how-to], you add the correct scopes for the APIs you want to access.
 
+  * **All APIs**
+    * `https://www.googleapis.com/auth/cloud-platform`
+
   * **BigQuery**
     * `https://www.googleapis.com/auth/bigquery`
+  * **Compute Engine**
+    * `https://www.googleapis.com/auth/compute`
   * **Datastore**
     * `https://www.googleapis.com/auth/datastore`
     * `https://www.googleapis.com/auth/userinfo.email`
+  * **DNS**
+    * `https://www.googleapis.com/auth/ndev.clouddns.readwrite`
   * **Pub/Sub**
     * `https://www.googleapis.com/auth/pubsub`
-    * `https://www.googleapis.com/auth/cloud-platform`
   * **Search**
-    * `https://www.googleapis.com/auth/cloud-platform`
     * `https://www.googleapis.com/auth/cloudsearch`
     * `https://www.googleapis.com/auth/userinfo.email`
   * **Storage**
