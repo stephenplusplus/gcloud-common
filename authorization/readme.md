@@ -8,9 +8,14 @@ If you are running this client on Google Compute Engine, we handle authorization
 
   * **BigQuery**
     * `https://www.googleapis.com/auth/bigquery`
+  * **Compute Engine**
+    * `https://www.googleapis.com/auth/compute`
   * **Datastore**
     * `https://www.googleapis.com/auth/datastore`
     * `https://www.googleapis.com/auth/userinfo.email`
+  * **DNS**
+    * `https://www.googleapis.com/auth/ndev.clouddns.readwrite`
+    * `https://www.googleapis.com/auth/cloud-platform`
   * **Pub/Sub**
     * `https://www.googleapis.com/auth/pubsub`
     * `https://www.googleapis.com/auth/cloud-platform`
