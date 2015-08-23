@@ -48,8 +48,8 @@ If you're experiencing a bug with the code, or have an idea for how it can be im
 [gh-search-python]: https://github.com/googlecloudplatform/gcloud-python/issues?&q=
 [gh-search-ruby]: https://github.com/googlecloudplatform/gcloud-ruby/issues?&q=
 
-[gh-golang]: https://github.com/googlecloudplatform/gcloud-golang
-[gh-java]: https://github.com/googlecloudplatform/gcloud-java
-[gh-node]: https://github.com/googlecloudplatform/gcloud-node
-[gh-python]: https://github.com/googlecloudplatform/gcloud-python
-[gh-ruby]: https://github.com/googlecloudplatform/gcloud-ruby
+[gh-golang]: https://github.com/googlecloudplatform/gcloud-golang/issues/new
+[gh-java]: https://github.com/googlecloudplatform/gcloud-java/issues/new
+[gh-node]: https://github.com/googlecloudplatform/gcloud-node/issues/new
+[gh-python]: https://github.com/googlecloudplatform/gcloud-python/issues/new
+[gh-ruby]: https://github.com/googlecloudplatform/gcloud-ruby/issues/new
