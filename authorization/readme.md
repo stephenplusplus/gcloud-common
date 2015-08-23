@@ -28,8 +28,7 @@ If you are running this client on Google Compute Engine, we handle authorization
 
 ## On Your Own Server
 
-If you are not running this client on Google Compute Engine, you need a Google Developers service account. To create a service account:
-
+If you are not running this client on Google Compute Engine, you need a Google Developers service account.
   1. Visit the [Google Developers Console][dev-console].
 
   1. Create a new project or click on an existing project.
@@ -54,30 +53,26 @@ If you are not running this client on Google Compute Engine, you need a Google D
 
   1. Navigate to **APIs & auth** > **Credentials**.
 
-    If you already have a service account, you can easily generate a new key file. If you don't have a service account, skip down to *[Create a new service account](#create-a-new-service-account)*.
+    You should see a screen like one of the following.
 
-    ### Re-use an existing service account
+    ![Create a new service account][create-new-service-account]
 
-    Click on **Generate new JSON key**:
+    ![Create a new service account With Existing Keys][create-new-service-account-existing-keys]
 
-    ![Generate a new JSON key][generate-key]
+    Find the "Add credentials" drop down and select "Service account" to be guided through downloading a new JSON key file.
 
-    ### Create a new service account
+    If you want to re-use an existing service account, you can easily generate a new key file. Just select the account you wish to re-use, and click "Generate new JSON key":
 
-    Click on **Create new Client ID**:
+    ![Re-use an existing service account][reuse-service-account]
 
-    ![Create a new Client ID][create-id]
+    The key file you download will be used by this library to authenticate API requests.
 
-    Select **Service account**:
 
-    ![Select Service account][service-account]
-
-    After the account is created, you will be prompted to download the JSON key file that the library uses to authorize your requests.
-
+[gce-how-to]: https://cloud.google.com/compute/docs/authentication#using
+[dev-console]: https://console.developers.google.com/project
 
 [enable-apis]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/enable-apis.png
-[generate-key]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/generate-new-json-key.png
-[create-id]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/create-new-client-id.png
-[service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/service-account.png
-[dev-console]: https://console.developers.google.com/project
-[gce-how-to]: https://cloud.google.com/compute/docs/authentication#using
+
+[create-new-service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/create-new-service-account.png
+[create-new-service-account-existing-keys]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/create-new-service-account-existing-keys.png
+[reuse-service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/reuse-service-account.png
