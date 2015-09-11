@@ -8,9 +8,11 @@ If you are running this client on Google Compute Engine, we handle authorization
 
   * **All APIs**
     * `https://www.googleapis.com/auth/cloud-platform`
+    * `https://www.googleapis.com/auth/cloud-platform.read-only`
 
   * **BigQuery**
     * `https://www.googleapis.com/auth/bigquery`
+    * `https://www.googleapis.com/auth/bigquery.insertdata`
   * **Compute Engine**
     * `https://www.googleapis.com/auth/compute`
   * **Datastore**
@@ -25,6 +27,8 @@ If you are running this client on Google Compute Engine, we handle authorization
     * `https://www.googleapis.com/auth/userinfo.email`
   * **Storage**
     * `https://www.googleapis.com/auth/devstorage.full_control`
+    * `https://www.googleapis.com/auth/devstorage.read_only`
+    * `https://www.googleapis.com/auth/devstorage.read_write`
 
 ## On Your Own Server
 
