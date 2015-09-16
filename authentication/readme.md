@@ -1,10 +1,10 @@
-# Authorization
+# Authentication
 
 It's easy to get authorized and start using Google's APIs. You can set your credentials on a global basis as well as on a per-API basis.
 
 ## On Google Compute Engine
 
-If you are running this client on Google Compute Engine, we handle authorization for you with no configuration. Just be sure when you [set up the GCE instance][gce-how-to], you add the correct scopes for the APIs you want to access.
+If you are running this client on Google Compute Engine, we handle authentication for you with no configuration. Just be sure when you [set up the GCE instance][gce-how-to], you add the correct scopes for the APIs you want to access.
 
   * **All APIs**
     * `https://www.googleapis.com/auth/cloud-platform`
@@ -75,8 +75,8 @@ If you are not running this client on Google Compute Engine, you need a Google D
 [gce-how-to]: https://cloud.google.com/compute/docs/authentication#using
 [dev-console]: https://console.developers.google.com/project
 
-[enable-apis]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/enable-apis.png
+[enable-apis]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authentication/enable-apis.png
 
-[create-new-service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/create-new-service-account.png
-[create-new-service-account-existing-keys]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/create-new-service-account-existing-keys.png
-[reuse-service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authorization/reuse-service-account.png
+[create-new-service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authentication/create-new-service-account.png
+[create-new-service-account-existing-keys]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authentication/create-new-service-account-existing-keys.png
+[reuse-service-account]: https://raw.githubusercontent.com/GoogleCloudPlatform/gcloud-common/master/authentication/reuse-service-account.png
