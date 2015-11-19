@@ -1,0 +1,68 @@
+<nav class="main-nav" ng-class="{ open: showNavDropdown }">
+  <div class="nav-current" ng-click="showNavDropdown = !showNavDropdown">
+    {{::friendlyLang}}
+  </div>
+  <div ng-click="showNavDropdown = false">
+    <ul class="menu">
+      <li ng-if="docs.guides.length" class="invisible-lg">
+        <h4 class="list-item--heading">Getting Started</h4>
+      </li>
+      <li ng-repeat="page in docs.guides" class="invisible-lg">
+        <a side-nav-link="/guides/{{page.id}}">{{page.title}}</a>
+      </li>
+      <li ng-if="docs.services.length" class="invisible-lg">
+        <h4 class="list-item--heading">API</h4>
+      </li>
+      <li ng-repeat="service in docs.services" class="menu--extra-links-item invisible-lg">
+        <a side-nav-link="/{{service.id}}">{{service.title || service.id}}</a>
+        <ul class="sub-sections" ng-if="service.nav">
+          <li ng-repeat="page in service.nav">
+            <a side-nav-link="/{{service.id}}/{{page.id}}">{{page.title || page.id}}</a>
+          </li>
+        </ul>
+      </li>
+      <li class="invisible-lg">
+        <h4 class="list-item--heading">External Resources</h4>
+      </li>
+      <li class="invisible-lg">
+        <a ng-href="https://github.com/GoogleCloudPlatform/gcloud-{{::lang}}" title="gcloud on Github" class="skip-external-link">
+          <img src="assets/images/icon-link-github.svg" alt="GitHub icon" class="menu-icon" />
+          GitHub
+        </a>
+      </li>
+      <li class="invisible-lg">
+        <a ng-href="https://github.com/GoogleCloudPlatform/gcloud-{{::lang}}/issues" title="gcloud issues on Github" class="skip-external-link">
+          <img src="assets/images/icon-link-github.svg" alt="GitHub icon" class="menu-icon" />
+          Issues
+        </a>
+      </li>
+      <li class="invisible-lg">
+        <a ng-href="http://stackoverflow.com/questions/tagged/gcloud-{{::lang}}" title="gcloud on StackOverflow" class="skip-external-link">
+          <img src="assets/images/icon-link-stackoverflow.svg" alt="StackOverflow icon" class="menu-icon" />
+          StackOverflow
+        </a>
+      </li>
+      <li class="invisible-lg">
+        <a ng-href="{{::package.href}}" ng-attr-title="gcloud on {{::package.title}}" class="skip-external-link">
+          <img src="assets/images/icon-link-package-manager.svg" ng-attr-alt="{{::package.title}} icon" class="menu-icon" />
+          {{::package.title}}
+        </a>
+      </li>
+      <li class="invisible-lg">
+        <h4 class="list-item--heading">gcloud Libraries</h4>
+      </li>
+      <li ng-repeat="lang in switcher.langs">
+        <a
+          ng-href="https://googlecloudplatform.github.io/gcloud-{{::lang.key}}"
+          ng-attr-title="gcloud-{{::lang.key}}"
+          class="skip-external-link">
+          <img
+            ng-src="assets/images/icon-lang-{{::lang.key}}.svg"
+            ng-attr-alt="gcloud-{{::lang.key}}"
+            class="menu-icon">
+          {{::lang.friendly}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

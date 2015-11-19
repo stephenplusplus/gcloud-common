@@ -1,0 +1,18 @@
+<div class="side-nav--meta">
+  <div class="row row--sm">
+    <div class="col">
+      <small><em>Browsing Version</em></small>
+      &nbsp;
+      <select
+        ng-model="docs.selectedVersion"
+        ng-options="version for version in versions"
+        ng-change="docs.loadVersion(docs.selectedVersion)"
+      ></select>
+      <div ng-if="selectedVersion.name === 'master' && docs.lastBuiltDate">
+        <small>
+          <em>Docs last built {{docs.lastBuiltDate | date : longDate}}.</em>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>

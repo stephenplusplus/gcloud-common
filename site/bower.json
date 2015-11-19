@@ -1,0 +1,13 @@
+{
+  "name": "gcloud-docs",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "normalize-css": "normalize.css#~3.0.3",
+    "highlightjs": "~9.0.0",
+    "angular-highlightjs": "~0.5.1",
+    "showdown": "~1.3.0",
+    "semver": "~4.3.4"
+  }
+}
