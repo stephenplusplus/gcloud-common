@@ -37,7 +37,7 @@ If you are not running this client on Google Compute Engine, you need a Google D
 
   1. Create a new project or click on an existing project.
 
-  1. Navigate to **APIs & auth** > **APIs** and enable the APIs that your application requires.
+  1. Activate the slide-out navigation tray and select **API Manager**. From here, you will enable the APIs that your application requires.
 
     ![Enable the APIs that your application requires][enable-apis]
 
@@ -55,7 +55,7 @@ If you are not running this client on Google Compute Engine, you need a Google D
       * Google Cloud Storage
       * Google Cloud Storage JSON API
 
-  1. Navigate to **APIs & auth** > **Credentials**.
+  1. Select **Credentials** from the side navigation.
 
     You should see a screen like one of the following.
 
