@@ -1,0 +1,81 @@
+<page-header title="service.title"></page-header>
+<version-switcher class="invisible-lg side-nav--meta--top"></version-switcher>
+<article class="content">
+  <h3 class="sub-heading toggle" ng-click="service.showGettingStarted = !service.showGettingStarted">
+    <div class="toggler">
+      <span ng-if="!service.showGettingStarted">▹</span>
+      <span ng-if="service.showGettingStarted">▿</span>
+    </div>
+    <span>
+      Getting Started with <code>gcloud</code>
+    </span>
+  </h3>
+  <article
+    ng-if="service.showGettingStarted"
+    ng-include="docs.overview"></article>
+  <hr />
+  <article ng-if="service.metadata.description">
+    <h3>{{::service.metadata.name}} Overview</h3>
+    <div bind-html-compile="service.metadata.description"></div>
+  </article>
+  <article ng-repeat="method in service.methods">
+    <h2 ng-if="method.metadata.isConstructor">{{::method.metadata.name}}</h2>
+    <h3 id="{{::method.metadata.name}}" ng-if="!method.metadata.isConstructor" class="method-heading">
+      <a class="permalink" ui-sref="docs.service({ method: method.metadata.name })">
+        <span>#</span>
+        {{::method.metadata.name}}
+      </a>
+    </h3>
+    <div bind-html-compile="method.metadata.description"></div>
+    <div ng-if="method.metadata.isConstructor" class="notice">
+      Available methods:
+      <span ng-repeat="method in service.methods">
+        <span ng-if="!method.metadata.isConstructor">
+          <a ui-sref="docs.service({ method: method.metadata.name })">{{method.metadata.name}}</a>{{$last ? '' : ', '}}
+        </span>
+      </span>
+    </div>
+    <section ng-if="method.params.length">
+      <h4>Parameters</h4>
+      <table class="table">
+        <tbody>
+          <tr ng-repeat="param in method.params" ng-class="{ 'param-optional': param.optional, 'param-nullable': param.nullable }">
+            <th scope="row" class="param">
+              <span ng-if="param.parent" class="param-parent">
+                <div>{{::param.parent}}</div>
+                ↳
+              </span>
+              {{::param.name}}
+            </th>
+            <td class="param-types" bind-html-compile="param.types" />
+            <td class="param-description" bind-html-compile="param.description" />
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section ng-if="method.returns.length">
+      <h4>Returns</h4>
+      <p bind-html-compile="method.returns[0]"></p>
+    </section>
+    <section ng-if="method.metadata.examples.length">
+      <h4>Example</h4>
+      <div ng-repeat="example in method.metadata.examples">
+        <div ng-if="example.caption" bind-html-compile="example.caption"></div>
+        <div ng-if="example.code" class="code-block">
+          <pre><code class="hljs" bind-html-compile="example.code"></code></pre>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h4>More Information</h4>
+      <ul class="resource-links">
+        <li>
+          <a ng-href="https://github.com/GoogleCloudPlatform/gcloud-{{lang}}/blob/{{docs.version}}/{{method.metadata.source}}">Source Code</a>
+        </li>
+        <li ng-repeat="resource in method.metadata.resources">
+          <a ng-href="{{resource.link}}">{{resource.title}}</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</article>

@@ -1,0 +1,14 @@
+<page-header title="guide.title">
+  <div class="row row--right" ng-if="guide.editUrl">
+    <div class="col margin-vertical">
+      <a ng-href="{{guide.editUrl}}" class="v-btn" title="Edit on Github">
+        <img src="assets/images/icon-link-github.svg">
+        Edit on GitHub
+      </a>
+    </div>
+  </div>
+</page-header>
+<version-switcher class="invisible-lg side-nav--meta--top"></version-switcher>
+<article class="content">
+  <markdown ng-repeat="content in guide.contents" ng-include="content"></markdown>
+</article>
