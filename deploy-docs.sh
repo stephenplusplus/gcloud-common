@@ -28,7 +28,7 @@ fi
 function deploy_docs {
   # Install dependencies & run the build (minify, concatenate dependencies, etc.)
   cd site
-  npm install & bower install
+  npm install --loglevel verbose & bower install
   gulp build
 
   # Pull down the target client library's gh-pages branch.
