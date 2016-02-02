@@ -26,7 +26,9 @@ if [ "${TRAVIS_BRANCH}" != "master" ] || [ "${TRAVIS_PULL_REQUEST}" != "false" ]
 fi
 
 function deploy_docs {
-  # Run the build (minify, concatenate dependencies, etc.)
+  # Install dependencies & run the build (minify, concatenate dependencies, etc.)
+  cd site
+  npm install & bower install
   gulp build
 
   # Pull down the target client library's gh-pages branch.
