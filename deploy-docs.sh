@@ -51,13 +51,21 @@ function deploy_docs {
   cp -R ../dist/* .
 
   # Commit and push using the encrypted GitHub oauth token.
-  git add src
-  git add index.html
-  git config user.name "selfiebot"
-  git commit -m "Pushing a doc site update
+  # Allow "git add" to fail if there aren't new files.
+  set +e
+  git add .
+  set -e
+  if [[ -n "$(git status --porcelain)" ]]; then
+    git config user.name "travis-ci"
+    git config user.email "travis@travis-ci.org"
+    git commit -m "Pushing a doc site update
 
-  https://github.com/GoogleCloudPlatform/gcloud-common/commit/${TRAVIS_COMMIT}"
-  git push https://${GH_OAUTH_TOKEN}@github.com/$1 HEAD:gh-pages
+    https://github.com/GoogleCloudPlatform/gcloud-common/commit/${TRAVIS_COMMIT}"
+    git status
+    git push https://${GH_OAUTH_TOKEN}@github.com/$1 HEAD:gh-pages
+  else
+    echo "Nothing to commit. Exiting without pushing changes."
+  fi
 }
 
 deploy_docs "googlecloudplatform/gcloud-node"
