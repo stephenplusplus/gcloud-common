@@ -26,19 +26,28 @@ if [ "${TRAVIS_BRANCH}" != "master" ] || [ "${TRAVIS_PULL_REQUEST}" != "false" ]
 fi
 
 function deploy_docs {
-  git submodule add -f -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/$1 gh-pages
+  # Run the build (minify, concatenate dependencies, etc.)
+  gulp build
 
-  # If there is an existing `src` directory in the destination's gh-pages
-  # branch, remove it (we're going to replace it).
-  if [ -d gh-pages/src ]
-    then git rm -rf gh-pages/src
+  # Pull down the target client library's gh-pages branch.
+  git submodule add -f -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/$1 gh-pages
+  cd gh-pages
+
+  # Remove the old site content. We're going to replace it.
+  if [ -d src ]
+    then git rm -rf src
   fi
 
-  git rm index.html
+  # `gulp build` earlier built the `dist` directory:
+  #   ../
+  #     dist/
+  #       index.html
+  #       src/
+  #         *.js
+  #         *.css
+  cp -R ../dist/* .
 
-  gulp build
-  cp -R dist/* gh-pages
-  cd gh-pages
+  # Commit and push using the encrypted GitHub oauth token.
   git add src
   git add index.html
   git config user.name "selfiebot"
