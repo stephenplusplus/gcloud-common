@@ -28,7 +28,7 @@ fi
 function deploy_docs {
   # Install dependencies & run the build (minify, concatenate dependencies, etc.)
   cd site
-  npm install --loglevel info
+  npm install
   bower install
   gulp build
 
